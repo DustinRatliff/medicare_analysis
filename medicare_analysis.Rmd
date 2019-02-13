@@ -1,0 +1,136 @@
+---
+title: "Analysis of Medicare Providers in Warren County"
+author: "Prepared by Dustin Ratliff, MPH, of the Warren County Health District"
+date: "January 10, 2019"
+output:
+  html_document:
+    df_print: paged
+  pdf_document: default
+  word_document:
+    fig_height: 4.5
+    fig_width: 6
+    reference_docx: template/wchd-word-template.docx
+editor_options:
+  chunk_output_type: console
+graphics: yes
+link-citations: yes
+csl: template/american-journal-of-public-health.csl
+bibliography: template/bibliography.bib
+---
+```{r echo=FALSE,include = FALSE, cache = TRUE, message=FALSE, warning=FALSE}
+source("00_Setup.r")
+
+```
+```{r echo=FALSE, include = FALSE, message=FALSE, warning=FALSE}
+source("10_Import.r")
+source("20_Wrangle.r")
+source("30_Visualize.r")
+```
+
+<br>
+
+`r knitr::include_graphics("template/graphics/socioeconomic_large.png", dpi=600)`
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+`r knitr::include_graphics("template/graphics/logo.png", dpi=600)`
+
+\newline
+
+#### A report prepared to describe Medicare Providers in Warren County
+
+##### 
+
+# Introduction
+
+Medicare is a federal system of health insurance for individuals aged 65 and over, certain young people with disabilities, and individuals with End-Stage Renal disease. The program is administered by the Centers for Medicare and Medicaid Services under the authority of the U.S. Department of Health and Human Services. Medicare does not include Medicaid, which is a joint state and federal program designed to provide medical cost assistance to individuals with limited income and resources.
+
+# Methods
+
+This report is generated using a series of datasets from various public datasets. These data have been accessed in the most raw version of
+data that is available or the data was retrieved from a web API. This ensures
+that analyses that are conducted are being done on the original data and are not
+calculations based on the calculations of others.
+
+All of the code for the generation of these reports is developed using the R
+Statistical Programming Language [@R-Project] and the R Studio IDE [@R-Studio].
+The code used for the development of this report is available on
+[GitHub](https://github.com/DustinRatliff/medicare_analysis). A copy of this report
+will be maintained on the Warren County Health District
+[website](http://warrenchd.com/document-category/assessments).
+
+### Data Analysis
+
+The data that has been compiled is analyzed using multiple methodologies. Data
+is first assessed to identify what information can be found in the raw
+information. The data then goes through the following process [@Wickham2017] :
+
+`r knitr::include_graphics("template/graphics/data-science-explore.png", dpi=600)`
+
+#### Quantitative Analysis
+
+Data was analyzed to develop charts, graphs, maps and other visualizations that will indicate the current status of Medicare providers in Warren County, Ohio. These analysis may include subsetting data sets, geocoding data for mapping, and large-scale statistical analysis on data sets to identify key metrics for evaluation.
+
+##### Comparability
+
+These data are available for the entire United States of America. these analayses can easily be translated to demonstrate information for other communites accross the country.
+
+### Data Sets
+
+The following data sets have been used to develop this analysis:
+
+  * Physician Compare National Downloadable File from data.medicare.gov
+  * Market Saturation And Utilization Dataset 2019-01-25 from data.medicare.gov
+
+#####
+
+# Results
+
+### What are the most serious health issues facing your community?
+
+#### Warren County
+
+
+
+```{r echo=FALSE}
+include_graphics("charts/violation_warren_combined.png", dpi=600)
+
+
+```
+
+
+<br>
+
+#####
+
+# Discussion
+
+# Conclusion
+
+#####
+
+# References
