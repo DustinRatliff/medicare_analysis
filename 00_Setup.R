@@ -26,7 +26,7 @@ library(gridExtra)
 library(sf)
 library(cartography)
 library(ggmap)
-# library(viridis)
+library(viridis)
 # library(waffle)
 # # # Be sure to install the FontAwesome font and install it using
 # library(extrafont)
@@ -54,7 +54,7 @@ library(ggmap)
 # 
 # # Census Packages
 # 
-# library(tidycensus)
+library(tidycensus)
 # library(webshot)
 # 
 # if (!("devtools" %in% installed.packages())) {

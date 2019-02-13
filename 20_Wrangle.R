@@ -26,5 +26,12 @@ warren_cities <- c("FRANKLIN",
 
 medicare_warren <- medicare_ohio %>% filter(City %in% warren_cities)
 
-medicare_warren <- geocode(medicare_warren, output = "latlon")
+# medicare_warren_geocode <- mutate_geocode(medicare_warren, full_address)
+# write_csv(medicare_warren_geocode, "data/medicare_warren_geocode.csv")
+# medicare_warren_geocode <- read_csv("data/medicare_warren_geocode.csv")
+
+
+
+medicare_warren_geocode <- read_csv("data/medicare_warren_geocode.csv") %>% 
+        distinct(NPI, .keep_all = TRUE)
         
