@@ -3,13 +3,13 @@ title: "Analysis of Medicare Providers in Warren County"
 author: "Prepared by Dustin Ratliff, MPH, of the Warren County Health District"
 date: "January 10, 2019"
 output:
-  html_document:
-    df_print: paged
-  pdf_document: default
   word_document:
     fig_height: 4.5
     fig_width: 6
     reference_docx: template/wchd-word-template.docx
+  pdf_document: default
+  html_document:
+    df_print: paged
 editor_options:
   chunk_output_type: console
 graphics: yes
@@ -95,6 +95,12 @@ information. The data then goes through the following process [@Wickham2017] :
 
 Data was analyzed to develop charts, graphs, maps and other visualizations that will indicate the current status of Medicare providers in Warren County, Ohio. These analysis may include subsetting data sets, geocoding data for mapping, and large-scale statistical analysis on data sets to identify key metrics for evaluation.
 
+Data were subset to attempt to achieve the most accurate representation of the number of primary care providers in Warren County. The Physician Compary data set was first subset to only have data for the state of Ohio, and further filtered for the cities/towns of Franklin, Harveysburg, Kings Mills, Lebanon, Maineville, Mason, Morrow, Oregonia, Pleasant Plain, South Lebanon, Springboro, Waynesville. Monroe and Middletown were not included in the analysis.
+
+Data was further filtered to only provide information on providers whose primary or secondary specialty were one of the following: Family Medicine, General Practice, Internal Medicine, Nurse Practitioner, Physician Assistant, or Geriatric Medicine.
+
+Data was mapped and tabulated to present the data in a visual format.
+
 ##### Comparability
 
 These data are available for the entire United States of America. these analayses can easily be translated to demonstrate information for other communites accross the country.
@@ -110,20 +116,15 @@ The following data sets have been used to develop this analysis:
 
 # Results
 
-### What are the most serious health issues facing your community?
-
-#### Warren County
-
-
+### Where are primary care providers located in Warren County?
 
 ```{r echo=FALSE}
-include_graphics("charts/violation_warren_combined.png", dpi=600)
-
-
+include_graphics("maps/provider_map.png", dpi=600)
 ```
 
-
 <br>
+
+Primary care physicians are primarily situated in the highly-populated areas of Springboro, Mason, and Lebanon. There are few providers that are located in the rural areas of the county. 
 
 #####
 

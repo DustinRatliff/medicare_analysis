@@ -4,6 +4,7 @@ medicare_warren_geocode_pcp <- medicare_warren_geocode %>%
                         c(
                                 "FAMILY MEDICINE",
                                 "GENERAL PRACTICE",
+                                "INTERNAL MEDICINE",
                                 "NURSE PRACTITIONER",
                                 "PHYSICIAN ASSISTANT",
                                 "GERIATRIC MEDICINE"
@@ -12,6 +13,7 @@ medicare_warren_geocode_pcp <- medicare_warren_geocode %>%
                         c(
                                 "FAMILY MEDICINE",
                                 "GENERAL PRACTICE",
+                                "INTERNAL MEDICINE",
                                 "NURSE PRACTITIONER",
                                 "PHYSICIAN ASSISTANT",
                                 "GERIATRIC MEDICINE"
@@ -20,6 +22,7 @@ medicare_warren_geocode_pcp <- medicare_warren_geocode %>%
                         c(
                                 "FAMILY MEDICINE",
                                 "GENERAL PRACTICE",
+                                "INTERNAL MEDICINE",
                                 "NURSE PRACTITIONER",
                                 "PHYSICIAN ASSISTANT",
                                 "GERIATRIC MEDICINE"
