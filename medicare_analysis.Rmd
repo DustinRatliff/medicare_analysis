@@ -17,7 +17,7 @@ link-citations: yes
 csl: template/american-journal-of-public-health.csl
 bibliography: template/bibliography.bib
 ---
-```{r echo=FALSE,include = FALSE, cache = TRUE, message=FALSE, warning=FALSE}
+```{r echo=FALSE,include = FALSE, , message=FALSE, warning=FALSE}
 source("00_Setup.r")
 
 ```
@@ -101,7 +101,7 @@ Data was further filtered to only provide information on providers whose primary
 
 Data was mapped and tabulated to present the data in a visual format.
 
-##### Comparability
+#### Comparability
 
 These data are available for the entire United States of America. these analayses can easily be translated to demonstrate information for other communites accross the country.
 
@@ -116,21 +116,73 @@ The following data sets have been used to develop this analysis:
 
 # Results
 
-### Where are primary care providers located in Warren County?
+### Where are Medicare primary care providers located in Warren County?
 
 ```{r echo=FALSE}
-include_graphics("maps/provider_map.png", dpi=600)
+include_graphics("maps/combined_maps.png", dpi=600)
 ```
 
 <br>
 
-Primary care physicians are primarily situated in the highly-populated areas of Springboro, Mason, and Lebanon. There are few providers that are located in the rural areas of the county. 
+Primary care physicians are primarily situated in the highly-populated areas of Springboro, Mason, and Lebanon. There are few providers that are located in the rural areas of the county. Overlaying the Medicare Primary Care Providers onto a map of Warren County with the percentage of the population aged 65 and over demonstrates that there are large areas of the county with a large percentage of the population aged 65+ with no medicare primary care providers in the area.
 
 #####
 
-# Discussion
+### How many medicare providers are providing preventive health services in Warren County compared to other counties and the state?
+
+```{r echo = FALSE}
+include_graphics("charts/market_saturation.png", dpi=600)
+```
+
+Analysis of the data from the Centers for Medicare and Medicaid Services indicates that Warren County had less than half of the number of beneficiaries per Medicare provider that provides preventive health services. Warren COunty is competitive with all three of the comparison counties which are Clermont, Delaware, and Medina.
+
+Warren County also has a higher percentage of Medicare-eligible that utilize preventive health services compared to the State of Ohio.
+
+Between 2015 and 2017, there has been a 16% increase in the number of Medicare providers that conduct preventive health services in Warren County. In comparison, there has been an increase of 13.5% statewide, 16.9% in Clermont, 28.4% in Delaware, and 14.5% in Medina. The number of benficiaries in Warren County has increased by 9.6% between 2015 and 2017. The State of Ohio has had a 7% increase, Clermont has had a 6.9% increase, Delaware has had a 20.5% increase, and Medina has had a 8.6% increase.
+
+#####
+
+### What services are wanted in the community?
+
+During the 2016 Community Health Assessment, the Community Themes and Strengths subcommittee collected survey responses to ascertain what is important in the community, how the quality of life is perceived, and assets to improve community health. Questions were developed using the Mobilizing Partnerships through Partnerships and Planning manual. These questions are comparable to any other community that has utilized the MAPP process to develop a Community Themes and Strengths Assessment. The following questions were developed:
+
+* What services would make your community a healthier, better place to live?
+* What classes/education programs or services would make your community a healthier, better place to live?
+* What community health resources or services would make your community a healthier, better place to live?
+* What economic resources or services would make your community a healthier, better place to live?
+* What safety/environmental resources or services would make your community a healthier, better place to live?
+* What other issues or services would make your community a healthier, better place to live?
+
+Responses to the survey questions were compiled into a single space. The data was then analyzed via qualitative data methodologies. 
+
+Each response to the six questions were analyzed to assess similiar themes and categories throughout the responses. As a result of these analysis, 12 categories were developed:
+
+* Public Safety
+* Underserved Services
+* Environmental
+* Community Activities
+* Youth Issues
+* Substance Abuse and Awareness
+* Employment
+* Transportation
+* Wellness
+* Senior Services
+* Information and Referral
+* Other
+
+```{r echo = FALSE}
+include_graphics("charts/ctsa_survey_table.png", dpi=600)
+```
+
+Based on the qualitative analysis of these data, 2.6% of the responses to the CTSA survey questions were related to senior services. Out of all of the 1,216 individual repsonses to the survey, only one discussed the word "Medicare". The citation of "accept Medicare" was in repsonse to the question "What community health resources or services would make your community a healthier, better place to live?" The repsponse to this question indicates that the respondent found it easy to find providers that accepted Medicare in Warren County.
+
+Additional analysis was conducted on the online customer survey repsonses to the 2019 Regional Community Health Needs Assessment facilitated by the Health Collaborative. None of the repsonses from Warren County discussed Medicare. Three responses discussed affordable healthcare for senior citizens.
+
+#####
 
 # Conclusion
+
+
 
 #####
 

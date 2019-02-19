@@ -287,7 +287,8 @@ map_theme_percentage <- function(Percentage, ...) {
                 geom_sf() +
                 coord_sf(crs = 26915) +
                 scale_fill_viridis(name = "Percentage") +
-                scale_color_viridis(name = "Percentage") +
+                scale_color_viridis(name = "Percentage") 
+        # +
                 theme(panel.background = element_blank()) +
                 theme(
                         axis.title.x = element_blank(),
@@ -316,17 +317,76 @@ warren_acs <- warren_acs %>%
                      Older64Female = B01001_044E + B01001_045E + B01001_046E + B01001_047E + B01001_048E + B01001_049E,
                      Older64 = Older64Male + Older64Female)
 
-over65_map <- warren_acs %>%
-        mutate(Percentage = Older64 / B02001_001E * 100) %>%
-        select(Percentage) %>%
 
-        map_theme_percentage(Percentage = Percentage) +
-        labs(title = "Percentage of Population 65+ by Census Tract",
+over65 <- warren_acs %>%
+                   mutate(Percentage = Older64 / B02001_001E * 100) %>%
+                   select(Percentage)
+over65_map <-
+        ggplot(data = over65,
+               aes(fill = Percentage, color = Percentage)) +
+        
+        geom_sf() +
+        geom_point(
+                data = medicare_warren_geocode_pcp,
+                aes(
+                        x = lon,
+                        y = lat,
+                        fill = NULL,
+                        color = NULL
+                ),
+                colour = "white",
+                size = 1
+        ) +
+  
+        theme(panel.background = element_blank(),
+                axis.title.x = element_blank(),
+                axis.text.x = element_blank(),
+                axis.ticks.x = element_blank(),
+                axis.title.y = element_blank(),
+                axis.text.y = element_blank(),
+                axis.ticks.y = element_blank(),
+              
+              legend.position = c(.05, .7),
+              legend.title=element_blank()) +
+        labs(title =
+                    "Percentage of Population 65+ by Census Tract \nwith Medicare Providers"
+                             
+                     ,
              subtitle = "Warren County, OH")
+       
+
+combined_maps <- grid.arrange(provider_map, over65_map, nrow = 1)
+
 ggsave(
         plot = over65_map,
         file = "maps/over65_map.png",
         width = 8,
         height = 8,
+        type = "cairo-png"
+)
+
+ggsave(
+        plot = combined_maps,
+        file = "maps/combined_maps.png",
+        width = 10,
+        height = 8,
+        type = "cairo-png"
+)
+
+ggsave(
+        plot = grid.arrange(market_saturation_county),
+        file = "charts/market_saturation.png",
+        width = 12,
+        height = 6,
+        type = "cairo-png"
+)
+
+grid.arrange(market_saturation_county)
+
+ggsave(
+        plot = ctsa_survey_table,
+        file = "charts/ctsa_survey_table.png",
+        width = 12,
+        height = 6,
         type = "cairo-png"
 )
